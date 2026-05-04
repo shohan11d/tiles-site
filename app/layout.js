@@ -1,6 +1,10 @@
+import dns from "node:dns";
+dns.setServers(['8.8.8.8','8.8.4.4']);
+
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 
 
 const geistSans = Geist({
@@ -12,6 +16,7 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
 
 export const metadata = {
   title: "Create Next App",
@@ -25,6 +30,7 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <Toaster position="bottom-right" />
         <Navbar />
         <main className="flex-grow">
           {children}

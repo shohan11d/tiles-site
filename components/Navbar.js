@@ -48,12 +48,20 @@ export default function Navbar() {
         {/* Right: Auth Section */}
         <div className="flex items-center gap-4">
           {!isLoggedIn ? (
-            <button
-              onClick={toggleLogin}
-              className="inline-flex h-10 items-center justify-center rounded-full bg-indigo-600 px-6 py-2 text-sm font-semibold text-white shadow-lg shadow-indigo-500/25 transition-all hover:bg-indigo-700 hover:shadow-indigo-500/40 active:scale-95 cursor-pointer"
-            >
-              Login
-            </button>
+            <div className="flex items-center gap-3">
+              <Link
+                href="/login"
+                className="text-sm font-medium text-foreground/80 hover:text-indigo-500 transition-colors px-4 py-2"
+              >
+                Login
+              </Link>
+              <Link
+                href="/register"
+                className="inline-flex h-10 items-center justify-center rounded-full bg-indigo-600 px-6 py-2 text-sm font-semibold text-white shadow-lg shadow-indigo-500/25 transition-all hover:bg-indigo-700 hover:shadow-indigo-500/40 active:scale-95"
+              >
+                Register
+              </Link>
+            </div>
           ) : (
             <div className="flex items-center gap-4">
               <Link

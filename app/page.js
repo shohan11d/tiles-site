@@ -1,4 +1,5 @@
 import Work from "@/components/WorkWith";
+import FeaturedTiles from "@/components/FeaturedTiles";
 import Link from "next/link";
 
 export default function Home() {
@@ -37,6 +38,9 @@ export default function Home() {
         {/* Decorative elements (subtle) */}
         <div className="absolute top-1/2 left-1/2 -z-10 h-[400px] w-[600px] -translate-x-1/2 -translate-y-1/2 opacity-20 blur-[120px] bg-indigo-600 rounded-full"></div>
       </section>
+
+      {/* Featured Tiles Section */}
+      <FeaturedTiles />
     </div>
   );
 }
