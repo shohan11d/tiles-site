@@ -38,7 +38,7 @@ export default function Navbar() {
             All Tiles
           </Link>
           <Link
-            href="/profile"
+            href="/my-profile"
             className="text-sm font-medium text-foreground/80 transition-colors hover:text-indigo-500"
           >
             My Profile
